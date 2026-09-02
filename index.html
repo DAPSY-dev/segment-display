@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segment display</title>
+    <link rel="stylesheet" href="./de-reboot.css">
+    <link rel="stylesheet" href="./segment-display.css">
+    <style>
+      body {
+        padding: 5vmin;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fourteen-segment display</h1>
+    <div class="segment-display-wrapper js-segment-display" data-id="segment_display"></div>
+    <script src="./segment-display.js" defer></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        window.segmentDisplayInstance = new SegmentDisplay(document.querySelector('.js-segment-display'))
+        // window.segmentDisplayInstance.write('0.123456789 Abcdefghijklmnopqrstuvwxyz')
+        window.segmentDisplayInstance.write('DAPSY.dev')
+      })
+    </script>
+  </body>
+</html>

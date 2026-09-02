@@ -1,0 +1,158 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -9999;
+  overflow: auto;
+  pointer-events: none;
+}
+.segment-display-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1vmin;
+}
+.segment-display {
+  position: relative;
+  width: 15vmin;
+  height: 15vmin;
+  background: lightgrey;
+  border-radius: 1vmin;
+}
+.segment-display__a,
+.segment-display__b,
+.segment-display__c,
+.segment-display__d,
+.segment-display__e,
+.segment-display__f,
+.segment-display__g1,
+.segment-display__g2,
+.segment-display__h,
+.segment-display__i,
+.segment-display__j,
+.segment-display__k,
+.segment-display__l,
+.segment-display__m,
+.segment-display__dp {
+  --offset-top: 12%;
+  --offset-left: 35%;
+  --thickness: 5%;
+  --length: 30%;
+  position: absolute;
+  background: black;
+  border-radius: 100vmin;
+  opacity: 0.05;
+}
+.segment-display__a.is-on,
+.segment-display__b.is-on,
+.segment-display__c.is-on,
+.segment-display__d.is-on,
+.segment-display__e.is-on,
+.segment-display__f.is-on,
+.segment-display__g1.is-on,
+.segment-display__g2.is-on,
+.segment-display__h.is-on,
+.segment-display__i.is-on,
+.segment-display__j.is-on,
+.segment-display__k.is-on,
+.segment-display__l.is-on,
+.segment-display__m.is-on,
+.segment-display__dp.is-on {
+  opacity: 1;
+}
+.segment-display__a {
+  top: var(--offset-top);
+  left: var(--offset-left);
+  width: var(--length);
+  height: var(--thickness);
+}
+.segment-display__b {
+  top: calc(var(--offset-top) + var(--thickness));
+  left: calc(var(--offset-left) + var(--length));
+  width: var(--thickness);
+  height: var(--length);
+}
+.segment-display__c {
+  top: calc(calc(var(--offset-top) + calc(var(--thickness) * 2)) + var(--length));
+  left: calc(var(--offset-left) + var(--length));
+  width: var(--thickness);
+  height: var(--length);
+}
+.segment-display__d {
+  top: calc(var(--offset-top) + calc(calc(var(--length) * 2) + calc(var(--thickness) * 2)));
+  left: var(--offset-left);
+  width: var(--length);
+  height: var(--thickness);
+}
+.segment-display__e {
+  top: calc(calc(var(--offset-top) + calc(var(--thickness) * 2)) + var(--length));
+  left: calc(var(--offset-left) - var(--thickness));
+  width: var(--thickness);
+  height: var(--length);
+}
+.segment-display__f {
+  top: calc(var(--offset-top) + var(--thickness));
+  left: calc(var(--offset-left) - var(--thickness));
+  width: var(--thickness);
+  height: var(--length);
+}
+.segment-display__g1 {
+  top: calc(var(--offset-top) + calc(var(--length) + var(--thickness)));
+  left: var(--offset-left);
+  width: calc(var(--length) / 2 - calc(var(--thickness) / 4));
+  height: var(--thickness);
+}
+.segment-display__g2 {
+  top: calc(var(--offset-top) + calc(var(--length) + var(--thickness)));
+  left: calc(var(--offset-left) + calc(calc(var(--length) / 2) + calc(var(--thickness) / 4)));
+  width: calc(var(--length) / 2 - calc(var(--thickness) / 4));
+  height: var(--thickness);
+}
+.segment-display__h {
+  top: calc(var(--offset-top) + calc(var(--thickness) + calc(var(--thickness) / 4)));
+  left: calc(var(--offset-left) + calc(calc(var(--length) / 4) - calc(var(--thickness) / 1.25)));
+  width: var(--thickness);
+  height: calc(var(--length) - calc(var(--thickness) / 2));
+  transform: rotate(-15deg);
+}
+.segment-display__i {
+  top: calc(var(--offset-top) + calc(var(--thickness) + calc(var(--thickness) / 4)));
+  left: calc(var(--offset-left) + calc(calc(var(--length) / 2) - calc(var(--thickness) / 2)));
+  width: var(--thickness);
+  height: calc(var(--length) - calc(var(--thickness) / 2));
+}
+.segment-display__j {
+  top: calc(var(--offset-top) + calc(var(--thickness) + calc(var(--thickness) / 4)));
+  left: calc(var(--offset-left) + calc(calc(var(--length) - calc(var(--length) / 8)) - var(--thickness)));
+  width: var(--thickness);
+  height: calc(var(--length) - calc(var(--thickness) / 2));
+  transform: rotate(15deg);
+}
+.segment-display__k {
+  top: calc(calc(var(--offset-top) + var(--length)) + calc(calc(var(--thickness) * 2) + calc(var(--thickness) / 4)));
+  left: calc(var(--offset-left) + calc(calc(var(--length) / 4) - calc(var(--thickness) / 1.25)));
+  width: var(--thickness);
+  height: calc(var(--length) - calc(var(--thickness) / 2));
+  transform: rotate(15deg);
+}
+.segment-display__l {
+  top: calc(calc(var(--offset-top) + var(--length)) + calc(var(--thickness) + calc(var(--thickness) * 1.25)));
+  left: calc(var(--offset-left) + calc(calc(var(--length) / 2) - calc(var(--thickness) / 2)));
+  width: var(--thickness);
+  height: calc(var(--length) - calc(var(--thickness) / 2));
+}
+.segment-display__m {
+  top: calc(calc(var(--offset-top) + var(--length)) + calc(calc(var(--thickness) * 2) + calc(var(--thickness) / 4)));
+  left: calc(var(--offset-left) + calc(calc(var(--length) - calc(var(--length) / 8)) - var(--thickness)));
+  width: var(--thickness);
+  height: calc(var(--length) - calc(var(--thickness) / 2));
+  transform: rotate(-15deg);
+}
+.segment-display__dp {
+  top: calc(var(--offset-top) + calc(calc(var(--length) * 2) + calc(var(--thickness) * 2)));
+  left: calc(var(--offset-left) + calc(var(--length)) + var(--thickness));
+  width: var(--thickness);
+  height: var(--thickness);
+}
